@@ -8,13 +8,14 @@
 html {
     font-family: 'lato' ,'Arial' , sans-serif;
     text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
 }
 
 .index-main
 {
-    width: 100%;
+    width: 110%;
     height: 100vh;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.71),rgba(0, 0, 0, 0.7)),url('front.jpg');
+
     background-size: cover;
     background-position: center;
 }
@@ -28,11 +29,20 @@ html {
     justify-content: center;
 }
 
+#header-button
+{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+}
+
 .header-content-text
 {
     font-size: 3vw;
     font-weight: 500;
-    color: #f4f7c5;
+    color: #B58963;
     letter-spacing: 0.5px;
 }
 
@@ -48,7 +58,7 @@ html {
 .header-content-info
 {
     font-size: 18px;
-    color: #f4f7c5;
+    color: #B58963;;
 }
 
 

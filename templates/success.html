@@ -27,49 +27,71 @@
         <div class = "second-main" style = "height: 100% , width : 100%;">
             <nav>
                 <ul style = "padding-right: 2%;" class = "main-nav">
-                    <li><a href ="/">HomePage</a></li>
+                    <li><a href ="/tools" style="color: #B58963"><b>Tools</b></a></li>
                 </ul>
 
             </nav>
             <div class = "header">
                 <row style = "width: 100% ; display: flex; justify-content: center;">
-                    <h3 class="header-text">Uploaded Image</h3>
+                    <h3 class="header-text"><b>Uploaded Image</b></h3>
                 </row>
+                <br>
+
                 <row style = "width: 100% ; display: flex; justify-content: center;">
                     <img class = "result-img" src={{url_for('static', filename = 'images/'+ img)}}>
                 </row>
             </div>
 
             <div class = "info">
-
+<br>
                 <row style = "width: 100% ; display: flex; justify-content: center;">
                     <h3 class = "header-text">Model Prediction</h3>
                 </row>
-                <row style = "width: 100%; display: flex; justify-content: center;">
-                    <table class="table-bordered text-light table-custom">
-                        <tr>
-                            <th>Rank</th>
-                            <th>Class</th>
-                            <th>Probability</th>
-                        </tr>
-                        <tr>
-                            <td>1st</td>
-                            <td>{{ predictions.class1 }}</td>
-                            <td>{{ predictions.prob1 }} %</td>
+                <br>
+                <row style = "width: 100%; display: flex; justify-content: center; color: #B58963;">
+<!--                    <div class="card" style=" box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s; width: 70%; height: 100%;">-->
+                    <table class="table-bordered table-custom" style="border : 0px solid black; margin-left: 30%; padding-bottom: 5%">
+                        <tr style="border : 0px solid black;">
+                            <td style="border : 0px solid black; color: black; text-align: left" ><b>Rock Type:</b></td>
+                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%; "><b>{{ predictions.class1 }}</b></td>
                           </tr>
-                          <tr>
-                            <td>2nd</td>
-                            <td>{{ predictions.class2 }}</td>
-                            <td>{{ predictions.prob2 }} %</td>
+                        <tr style="border : 0px solid black; padding-right: 5%">
+                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left" ><b>Warna:</b></td>
+                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%; padding-right: 40%">{{ warna }}</td>
                         </tr>
-                        <tr>
-                            <td>3rd</td>
-                            <td>{{ predictions.class3 }}</td>
-                            <td>{{ predictions.prob3 }} %</td>
-                          </tr>
+                        <tr style="border : 0px solid black; padding-right: 5%">
+                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left" ><b>Ukuran Butir:</b></td>
+                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">{{ ukuran }}</td>
+                        </tr>
+                        <tr style="border : 0px solid black; padding-right: 5%">
+                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left" ><b>Kemas:</b></td>
+                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">{{ kemas }}</td>
+                        </tr>
+                        <tr style="border : 0px solid black; padding-right: 5%">
+                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left" ><b>Sortasi:</b></td>
+                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">{{ sortasi }}</td>
+                        </tr>
+                        <tr style="border : 0px solid black; padding-right: 5%">
+                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left" ><b>Bentuk Butir:</b></td>
+                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">{{ bentuk }}</td>
+                        </tr>
+                        <tr style="border : 0px solid black; padding-right: 5%">
+                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left" ><b>Porosity:</b></td>
+                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">{{ porosity }}</td>
+                        </tr>
+                        <tr style="border : 0px solid black; padding-right: 5%">
+                            <td style="border : 0px solid black; color: black; width: 20%; text-align: left" ><b>Permeability:</b></td>
+                            <td style="border : 0px solid black;color: black; text-align: left; padding: 0.5%">{{ permeability }}</td>
+                        </tr>
                     </table>
+<!--                    </div>-->
                 </row>
+
             </div>
         </div>
     </body>
+<footer style="background-color: #3B3B3B; padding: 1%">
+    <br>
+    <p style=" text-align: center; color: #FFFFFF; font-size: 12pt">© 2021 Copyright: <b>Rocklens</b></p>
+</footer>
 </html>

@@ -17,7 +17,7 @@ html {
 }
 
 .second-main{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.71),rgba(0, 0, 0, 0.7)),url('b4.jpg');
+    background-image: linear-gradient(to right, #DABEA8 , #F0E5DC);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -31,12 +31,12 @@ h1{
     font-weight: 400;
     letter-spacing: 1px;
     word-spacing: 3px;
-    color: #f0e3e3;
+    color: #B58963;
 }
 
 h3
 {
-    color:#f9d89c!important;
+    color: #B58963!important;
 }
 
 .result-img
@@ -72,6 +72,7 @@ th
 .table-custom
 {
     width: 60%;
+    border : 2px solid black;
 }
 
 @media screen and (max-width: 615px)
